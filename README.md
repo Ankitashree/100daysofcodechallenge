@@ -1,1 +1,1 @@
-# 100daysofcodechallenge
+Accepted the challenge
