@@ -1,0 +1,35 @@
+Question-Interface
+An Interface is a fully abstract class that helps in java abstraction.
+see about interfaces in java with the help of examples.
+public interface inter {
+	void inter (int par);
+}
+class client implements inter
+{
+	public void inter(int p)
+	{
+		System.out.println("callback called with"+p);
+	}
+}
+class anotherclass implements inter
+{
+	public void inter(int p)
+	{
+		System.out.println("another version of callback");
+		System.out.println("p square"+ (p*p));
+	}
+}
+class Testface
+{
+	public static void main(String args[])
+	{
+		inter c=new client();
+		c.inter(42);
+		inter ob=new anotherclass();
+		c=ob;
+		c.inter(34);
+	}
+}
+Output-callback called with42
+another version of callback
+p square1156
