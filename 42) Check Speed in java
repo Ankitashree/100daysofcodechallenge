@@ -1,0 +1,35 @@
+QUESTION-Problem:Write a JAVA program for checking the speed of drivers.
+Enter the value of speed -if speed is less than 70,it should print "OK"
+-Otherwise for every 5 km above the speed limit(70), it should give the driver one demerit point and print the total number of demerit point.
+For example, if the speed is 80,it should print "Point 2" -If the driver gets more than 12 points, the function should print :License suspended"
+
+
+SOLUTION-package speed;
+import java.util.*;
+public class labspeed {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int dem=0;
+          Scanner sc= new Scanner(System.in);
+          System.out.println("Enter the speed");
+          int sp= sc.nextInt();
+          if(sp<70)
+          {
+        	  System.out.println("OK");
+          }
+          else if(sp>=70)
+          {
+        	  int ext=sp-70;
+        	   dem=ext/5;
+        	  System.out.println("POINTS:"+dem);
+        	 
+          }
+	       
+          if(dem>12)
+          {
+        	  System.out.println("LICENSE SUSPENDED");
+          }
+	
+	}
+}
