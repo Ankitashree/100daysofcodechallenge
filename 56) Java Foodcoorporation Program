@@ -1,0 +1,53 @@
+QUESTION-In this program..I am calculating payment and overtime..and
+also put a condition that if a bp<80 and hw>60.then it print error ,
+otherwise print Overtime and Payment of Employee.
+SOLUTION-package foodcorporation;
+
+public class foodcorporation {
+	int hw;
+	double bp;
+	float payment=0;
+	float overtime=0;
+	void input(double Bp, int Hw)
+	{
+		bp=Bp;
+		hw=Hw;
+		if(bp<80)
+		System.out.println("error");
+		if(hw>60)
+		System.out.println("error");	
+	}
+	void salary()
+	{
+		if(hw<=40)
+		{
+		double payment= (bp*hw);
+		System.out.println("payment of employee"+payment);
+		}
+		else
+		{
+		float overtime=(float)((hw-40)*1.5);
+		System.out.println("overtime of employee:"+overtime);
+		double payment =(40*bp);
+		double salary=payment+overtime;
+		System.out.println("payment of employee:"+salary);
+		}
+	}
+}
+class foodcorporationdemo
+{
+	public static void main(String args[])
+	{
+		foodcorporation f1= new foodcorporation();
+		f1.input(7.50,35);
+		f1.salary();
+		foodcorporation f2= new foodcorporation();
+		f2.input(8.20,47);
+		f2.salary();
+		foodcorporation f3= new foodcorporation();
+		f3.input(10.00,73);
+		f3.salary();
+		
+		
+	}
+}
