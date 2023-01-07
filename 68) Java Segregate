@@ -1,0 +1,36 @@
+QUESTION-Wite a program to segregate all the 0's in left and 1's in right.
+import java.util.*;
+class segregate
+{
+ public static void main(String args[])
+   {
+     Scanner sc= new Scanner(System.in);
+     int i=0,j=4;
+     int arr[]={1,0,1,0,1};
+     while(true){
+       if(i>=j)
+       break;
+       if(arr[i]==0)
+         i++;
+      else if(arr[j]==1)
+         j--;
+       else
+    {
+        arr[i]=0;
+        arr[j]=1;
+        i++;
+         j--;
+     }
+    
+  }
+ for(int k=0;k<arr.length;k++)
+    System.out.println(arr[k] + "");
+}
+}
+
+
+OUTPUT-0
+0
+1
+1
+1
