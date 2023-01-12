@@ -1,0 +1,45 @@
+QUESTION-Write a program to arrange all the substring of string in ascending order.
+
+Sample input: java
+
+Sample output:
+a
+aa
+aaj
+aajv
+a
+aj
+ajv
+j
+jv
+v
+
+SOLUTION-package first;
+import java.util.*;
+public class pk {
+	    public static void main(String args[]) {
+	        Scanner sc = new Scanner(System.in);
+	        String data = sc.next();
+	        
+	        // number check R.k
+	        for (int i = 0; i < data.length(); i++) {
+	            int check = data.charAt(i);
+	            if (48 < check && check < 57) {
+	                System.out.println("incorrect input");
+	                return;
+	            }
+	        }
+	       
+	        data = data.toLowerCase();
+	        char[] dataarr = data.toCharArray();
+	        Arrays.sort(dataarr);
+	        String newstring = new String(dataarr);
+	        for (int i = 0; i < newstring.length(); i++) {
+	            for (int j = i; j < newstring.length(); j++) {
+	                System.out.println(newstring.substring(i, j + 1));
+	            }
+	        }
+
+	    }
+
+	}
