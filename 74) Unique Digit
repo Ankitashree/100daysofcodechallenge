@@ -1,0 +1,41 @@
+QUESTION-Write a program to find the count of numbers which consists of unique digits.
+
+INPUT:
+ Input consist of two integer .Lower and upper value of an range.
+ 
+ OUTPUT:
+  Output consists of single line print the count of unique digits in given range. Else,print "No Unique Number"
+  
+  Sample Input:
+  15
+  
+  Sample output:
+  5
+  
+  Solution-
+  package ques1;
+import java.util.*;
+public class primepair {
+     public static void main(String args[])
+     {
+    	 int d=0,count=0;
+    	
+    	 Scanner sc =new Scanner(System.in);
+    	 System.out.println("enter a number:");
+    	 int n=sc.nextInt();
+    	 
+       for(int i=10;i<=n;i++)
+       {
+    	   int temp=i;
+    	   d=temp%10;
+    	   temp=temp/10;
+    	   if(d!=temp)
+    	   {
+    		   count++;
+    		   
+    	   }
+    	   
+       }
+       System.out.println(count);    	 }
+     
+}
