@@ -1,0 +1,33 @@
+QUESTION-Input a program to input 10 elements of an array print all the elements having the sum of their digits are even. For example:
+
+Input: 23,45,667,51,57,101,34,56,456,344
+
+Output: 51,57,101.
+
+SOLUTION-package ques4;
+import java.util.*;
+public class oddsum {
+     public static void main(String arg[])
+     {
+    	int d;
+    	 int a[]= {23,45,667,51,57,101,34,56,456,344};
+    	 for(int i1=0;i1<10;i1++)
+    	 {
+    		 int sum = 0;
+    		 
+    		 int temp=a[i1];
+    		 while(temp!=0){
+    		        sum += temp % 10;
+    		        temp = temp / 10;
+    		    }
+    		 if(sum%2==0)
+    		 {
+    			 System.out.println(a[i1]);
+    		 }
+    		 
+    		
+    	 }
+    	 
+    	 
+     }
+}
