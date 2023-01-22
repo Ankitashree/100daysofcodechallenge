@@ -1,0 +1,13 @@
+QUESTION-Write a Java program to concatenate a given string to the end of another string.
+SOLUTION-
+    import java.util.*;
+class concatenate
+{
+ public static void main(String args[])
+{
+  String str1="My Name is Ankita";
+  String str2="I am a MCA student";
+  String str3=str1.concat(str2);
+System.out.println(str3);
+}
+}
