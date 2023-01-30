@@ -1,0 +1,14 @@
+QUESTION-Write a program to print ascii value of character
+SOLUTION-//ASCII value 
+import java.util.*;
+class ascii
+{
+public static void main(String args[])
+{
+ Scanner sc=new Scanner(System.in);
+ System.out.println("Enter a character");
+ char n=sc.next().charAt(0);
+int c= n;
+ System.out.println("The ascii is"+ c);
+ }
+}
